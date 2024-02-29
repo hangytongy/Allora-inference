@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "serverless": "^3.38.0",
     "snyk": "^1.1281.0"
   }
 }
