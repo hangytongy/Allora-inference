@@ -11,5 +11,9 @@
   "dependencies": {
     "serverless": "^3.38.0",
     "snyk": "^1.1281.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "serverless-offline": "^13.3.3"
   }
 }
