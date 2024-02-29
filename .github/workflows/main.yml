@@ -30,6 +30,7 @@ jobs:
         run: npm audit
   synk-test:
     runs-on: ubuntu-latest
+    needs: install-dependencies
     steps:
       - uses: actions/checkout@master
       - name: Install snyk
@@ -38,6 +39,8 @@ jobs:
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: '${{ secrets.SNYK_TOKEN }}'
+        with:
+          args: test --severity-threshold=high
   deploy:
     name: deploy
     runs-on: ubuntu-latest
