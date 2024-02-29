@@ -32,6 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: Install synk
+        run : npm install -g synk
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
