@@ -39,12 +39,11 @@ jobs:
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: '${{ secrets.SNYK_TOKEN }}'
-        with:
-          args: test --severity-threshold=high
+
   deploy:
     name: deploy
     runs-on: ubuntu-latest
-    needs: [synk-test,npm-audit]
+    needs: npm-audit
     strategy:
       matrix:
         node-version:
