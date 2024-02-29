@@ -44,7 +44,7 @@ jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
-    needs: install-dependencies
+    needs: synk-test
     strategy:
       matrix:
         node-version:
